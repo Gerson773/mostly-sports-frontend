@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+
+/* .header__logo {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+} */
+
+.header__signin-container {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  border: 1px;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  margin-right: 10px;
+  box-sizing: border-box;
+}
+
+.mostly__logo {
+  width: 280px;
+  height: auto;
+}
