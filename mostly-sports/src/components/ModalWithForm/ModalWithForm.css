@@ -1,0 +1,134 @@
+.modal {
+  display: flex;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__content {
+  background-color: white;
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 34px 36px;
+}
+
+.modal__title {
+  display: flex;
+  font-family: "Roboto-Bold";
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28.13px;
+  color: #000;
+  position: relative;
+}
+
+.modal__label {
+}
+
+.modal__header {
+  font-family: "Inter-Regular";
+  color: #2f71e5;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14.52px;
+  position: relative;
+  padding-bottom: 9px;
+  margin-left: 2px;
+}
+
+.modal__input {
+  width: 100%;
+  max-width: 358px;
+  max-height: 24px;
+  box-sizing: border-box;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-bottom-width: 1px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding-bottom: 10px;
+}
+
+.modal__input::placeholder {
+  font-family: "Inter-Regular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  color: rgba(0, 0, 0, 0.2);
+  margin: 0;
+}
+
+.close__button-x {
+  background-image: url(../../images/closebtn.svg);
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  transform: translate(85%, -85%);
+  cursor: pointer;
+}
+
+.signin__btn,
+.signup__btn {
+  display: flex;
+  width: 358px;
+  font-family: "Roboto-Regular";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  background-color: #e6e8eb;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  padding: 10px 50px;
+  color: #b6bcbf;
+  outline: none;
+  cursor: pointer;
+  justify-content: center;
+  margin-top: 39px;
+}
+
+.signup__login-link,
+.signin__login-link {
+  display: flex;
+  width: 358px;
+  height: 20px;
+  color: #000;
+  font-family: "Inter-Regular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  cursor: pointer;
+  justify-content: center;
+  margin-top: 16px;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.signup__text,
+.signin__text {
+  font-family: "Inter-Regular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  color: #2f71e5;
+  margin-left: 3px;
+}
+
+.signin__success-modal {
+  font-family: "Inter-Regular";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.94px;
+  color: #2f71e5;
+}

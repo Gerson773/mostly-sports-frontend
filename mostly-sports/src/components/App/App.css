@@ -1,1 +1,14 @@
+* {
+  box-sizing: border-box;
+}
 
+@import url(../../vendor/fonts.css);
+
+.app-container {
+  background-image: url("../../images/homescreen2.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.75);
+  background-position: center center;
+}
