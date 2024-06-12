@@ -30,3 +30,39 @@
     transform: translateX(-100%);
   }
 }
+
+@media (max-width: 768px) {
+  .ticker__container {
+    width: 350px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 40px 0;
+  }
+
+  .ticker__item {
+    padding: 0 10px;
+  }
+
+  .ticker__list {
+    animation: ticker 1000s linear infinite;
+    animation-delay: -500s;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticker__container {
+    width: 350px;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 45px 0;
+  }
+
+  .ticker__item {
+    padding: 0 8px;
+  }
+
+  .ticker__list {
+    animation: ticker 1200s linear infinite;
+    animation-delay: -600s;
+  }
+}

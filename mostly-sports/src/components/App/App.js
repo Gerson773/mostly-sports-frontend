@@ -55,26 +55,27 @@ function App() {
   return (
     <div className="app-container">
       <Header onLogin={handleLoginModal} />
+      <div className="main__container">
+        <Routes>
+          <Route path="/" element={<Main />} />
 
-      <Routes>
-        <Route path="/" element={<Main />} />
+          <Route
+            path="/login"
+            element={<SigninModal onClose={handleCloseModal} />}
+          />
 
-        <Route
-          path="/login"
-          element={<SigninModal onClose={handleCloseModal} />}
-        />
-
-        <Route
-          path="/signup"
-          element={
-            <SignupModal
-              onSignUp={handleSignupModal}
-              onClose={handleCloseModal}
-              isOpen={activeModal === "signup"}
-            />
-          }
-        />
-      </Routes>
+          <Route
+            path="/signup"
+            element={
+              <SignupModal
+                onSignUp={handleSignupModal}
+                onClose={handleCloseModal}
+                isOpen={activeModal === "signup"}
+              />
+            }
+          />
+        </Routes>
+      </div>
       <Footer />
       {activeModal === "login" && (
         <SigninModal

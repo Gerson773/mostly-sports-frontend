@@ -44,3 +44,49 @@
   border-radius: 50px;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .search__container {
+    width: 70%;
+    padding-top: 10px;
+    /* height: auto; Adjust height if necessary */
+  }
+
+  .search__input {
+    width: 100%;
+    height: 48px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 16px;
+  }
+
+  .search__button {
+    width: 120px;
+    height: 48px;
+    font-size: 14px;
+    line-height: 48px;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search__container {
+    width: 70%;
+    padding-top: 10px;
+  }
+
+  .search__input {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0 12px;
+  }
+
+  .search__button {
+    width: 100px;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+  }
+}
