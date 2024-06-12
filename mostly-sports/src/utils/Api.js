@@ -1,5 +1,5 @@
 import { API_KEY, TICKER_BASE_URL, SEARCH_BASE_URL } from "./constant";
-import { processServerResponse, request } from "./utils";
+import { processSearchResponse, processTickerResponse, request } from "./utils";
 
 const formatDate = (date) => {
   const d = new Date(date);
@@ -12,7 +12,7 @@ const formatDate = (date) => {
 export function getScheduledEvents(date = new Date()) {
   const formattedDate = formatDate(date);
   const url = `${TICKER_BASE_URL}/api/v1/sport/baseball/scheduled-events/${formattedDate}`;
-  return fetch(url, {
+  const options = {
     method: "GET",
     headers: {
       "X-RapidAPI-Key": API_KEY,
@@ -20,7 +20,14 @@ export function getScheduledEvents(date = new Date()) {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-  }).then(processServerResponse);
+  };
+
+  return request(url, options)
+    .then((result) => processTickerResponse(result))
+    .catch((error) => {
+      console.error("Error fetching scheduled events:", error);
+      throw error;
+    });
 }
 
 export function getSearchResults() {
@@ -35,7 +42,7 @@ export function getSearchResults() {
   };
 
   return request(url, options)
-    .then((result) => processServerResponse(result))
+    .then((result) => processSearchResponse(result))
     .catch((error) => {
       console.error("Error fetching search results:", error);
       throw error;
