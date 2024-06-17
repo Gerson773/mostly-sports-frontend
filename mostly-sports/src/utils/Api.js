@@ -30,8 +30,8 @@ export function getScheduledEvents(date = new Date()) {
     });
 }
 
-export function getSearchResults() {
-  const url = SEARCH_BASE_URL;
+export function getSearchResults(event_id) {
+  const url = `${SEARCH_BASE_URL}?event_id=${encodeURIComponent(event_id)}`;
 
   const options = {
     method: "GET",
@@ -41,10 +41,15 @@ export function getSearchResults() {
     },
   };
 
-  return request(url, options)
-    .then((result) => processSearchResponse(result))
-    .catch((error) => {
-      console.error("Error fetching search results:", error);
-      throw error;
+  return fetch(url, options)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Error: ${response.status} ${response.statusText}`);
+      }
+      return response.json();
+    })
+    .then((result) => {
+      console.log(result);
+      return result;
     });
 }
