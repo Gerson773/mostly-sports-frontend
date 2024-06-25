@@ -10,8 +10,11 @@ import SigninModal from "../SigninModal/SigninModal";
 import SignupModal from "../SignupModal/SignupModal";
 import Main from "../Main/Main";
 import { Routes, Route } from "react-router-dom";
+import { NewsCardList } from "../NewsCardList/NewsCardList";
 
 function App() {
+  const [searchResults, setSearchResults] = useState([]);
+  const [error, setError] = useState(null);
   const [activeModal, setActiveModal] = useState("");
 
   const handleLoginModal = () => {
@@ -57,7 +60,17 @@ function App() {
       <Header onLogin={handleLoginModal} />
       <div className="main__container">
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route
+            path="/"
+            element={
+              <Main
+                setSearchResults={setSearchResults}
+                setError={setError}
+                searchResults={searchResults}
+                error={error}
+              />
+            }
+          />
 
           <Route
             path="/login"

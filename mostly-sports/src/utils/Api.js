@@ -30,8 +30,15 @@ export function getScheduledEvents(date = new Date()) {
     });
 }
 
-export function getSearchResults(event_id) {
-  const url = `${SEARCH_BASE_URL}?event_id=${encodeURIComponent(event_id)}`;
+export function getSearchResults(
+  query,
+  date = "any",
+  isVirtual = false,
+  start = 0
+) {
+  const url = `${SEARCH_BASE_URL}?query=${encodeURIComponent(
+    query
+  )}&date=${date}&is_virtual=${isVirtual}&start=${start}`;
 
   const options = {
     method: "GET",
@@ -48,8 +55,26 @@ export function getSearchResults(event_id) {
       }
       return response.json();
     })
-    .then((result) => {
-      console.log(result);
-      return result;
+    .then((data) => {
+      console.log("API Response:", data);
+
+      if (data.status !== "OK" || !data.data) {
+        throw new Error("Invalid response format");
+      }
+
+      const mappedResults = data.data.map((event) => ({
+        title: event.name,
+        description: event.description,
+        imageUrl: event.thumbnail,
+        date: event.start_time,
+        source: event.publisher,
+        eventId: event.event_id,
+      }));
+
+      return mappedResults;
+    })
+    .catch((error) => {
+      console.error("Error fetching search results:", error);
+      throw error;
     });
 }

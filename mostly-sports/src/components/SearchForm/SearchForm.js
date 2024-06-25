@@ -2,16 +2,14 @@ import React, { useState } from "react";
 import "./SearchForm.css";
 import { getSearchResults } from "../../utils/Api";
 
-function SearchForm() {
+function SearchForm({ setSearchResults, setError, error }) {
   const [eventId, setEventId] = useState("");
-  const [results, setResults] = useState([]);
-  const [error, setError] = useState(null);
 
   const handleSearch = () => {
     getSearchResults(eventId)
-      .then((result) => {
-        setResults(result);
-        setError(null); // Clear any previous errors
+      .then((results) => {
+        setSearchResults(results);
+        setError(null);
       })
       .catch((error) => {
         console.error("Error fetching search results:", error);
@@ -37,13 +35,6 @@ function SearchForm() {
           Search
         </button>
         {error && <p style={{ color: "red" }}>{error}</p>}
-        {results.length > 0 && (
-          <ul>
-            {results.map((result, index) => (
-              <li key={index}>{result.title}</li>
-            ))}
-          </ul>
-        )}
       </form>
     </div>
   );
