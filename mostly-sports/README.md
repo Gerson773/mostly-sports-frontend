@@ -1,3 +1,18 @@
+# Mostly Sports Site
+
+## Overview
+
+The idea behind this project was to create a full-stack application and deploy it on the internet. Due to time constraints, only the frontend has been completed so far. The backend will be developed in the future, and the site will eventually go live. This custom website allows users to search for any sporting event, team, or general sports term to get information about game times and details.
+
+## Features
+
+- **Sports Ticker:** Integrated a Sports API to display a ticker in the footer, currently showing live baseball games. The ticker can be updated to display a variety of sports.
+- **Real-Time Events Search:** Implemented a Real-Time Events Search API, allowing users to search for sports events by team, game, or sport. The search returns results in the form of three cards, with the ability to expand and show more cards.
+
+- **Bookmarking Feature:** The cards include an option for users to save events to their personal account. This feature will be fully implemented in the future.
+
+- **Responsive Design:** The site is optimized for both mobile and desktop viewing, ensuring a smooth user experience across different devices.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
