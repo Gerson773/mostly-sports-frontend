@@ -11,11 +11,13 @@ import SignupModal from "../SignupModal/SignupModal";
 import Main from "../Main/Main";
 import { Routes, Route } from "react-router-dom";
 import { NewsCardList } from "../NewsCardList/NewsCardList";
+import CirclePreloader from "../CirclePreloader/CirclePreloader";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
   const [error, setError] = useState(null);
   const [activeModal, setActiveModal] = useState("");
+  const [loading, setLoading] = useState(true);
 
   const handleLoginModal = () => {
     console.log("Opening login modal");
@@ -55,56 +57,68 @@ function App() {
     };
   }, [activeModal, handleCloseModal]);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
   return (
     <div className="app-container">
-      <Header onLogin={handleLoginModal} />
-      <div className="main__container">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Main
-                setSearchResults={setSearchResults}
-                setError={setError}
-                searchResults={searchResults}
-                error={error}
+      {loading ? (
+        <CirclePreloader />
+      ) : (
+        <>
+          <Header onLogin={handleLoginModal} />
+          <div className="main__container">
+            <Routes>
+              <Route
+                path="/"
+                element={
+                  <Main
+                    setSearchResults={setSearchResults}
+                    setError={setError}
+                    searchResults={searchResults}
+                    error={error}
+                  />
+                }
               />
-            }
-          />
 
-          <Route
-            path="/login"
-            element={<SigninModal onClose={handleCloseModal} />}
-          />
-
-          <Route
-            path="/signup"
-            element={
-              <SignupModal
-                onSignUp={handleSignupModal}
-                onClose={handleCloseModal}
-                isOpen={activeModal === "signup"}
+              <Route
+                path="/login"
+                element={<SigninModal onClose={handleCloseModal} />}
               />
-            }
-          />
-        </Routes>
-      </div>
-      <Footer />
-      {activeModal === "login" && (
-        <SigninModal
-          onSignUp={handleSignupModal}
-          onClose={handleCloseModal}
-          // handleUserLogin={handleLogIn}
-          isOpen={activeModal === "login"}
-        />
-      )}
-      {activeModal === "signup" && (
-        <SignupModal
-          onClose={handleCloseModal}
-          // handleUserLogin={handleLogIn}
-          isOpen={activeModal === "signup"}
-          onLogin={handleLoginModal}
-        />
+
+              <Route
+                path="/signup"
+                element={
+                  <SignupModal
+                    onSignUp={handleSignupModal}
+                    onClose={handleCloseModal}
+                    isOpen={activeModal === "signup"}
+                  />
+                }
+              />
+            </Routes>
+          </div>
+          <Footer />
+          {activeModal === "login" && (
+            <SigninModal
+              onSignUp={handleSignupModal}
+              onClose={handleCloseModal}
+              // handleUserLogin={handleLogIn}
+              isOpen={activeModal === "login"}
+            />
+          )}
+          {activeModal === "signup" && (
+            <SignupModal
+              onClose={handleCloseModal}
+              // handleUserLogin={handleLogIn}
+              isOpen={activeModal === "signup"}
+              onLogin={handleLoginModal}
+            />
+          )}
+        </>
       )}
     </div>
   );

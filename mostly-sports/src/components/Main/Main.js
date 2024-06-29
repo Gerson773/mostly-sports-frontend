@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Main.css";
 import SearchForm from "../SearchForm/SearchForm";
 import NewsCardList from "../NewsCardList/NewsCardList";
+import CirclePreloader from "../CirclePreloader/CirclePreloader";
 
 function Main({ searchResults, error, setSearchResults, setError }) {
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <div>
       <section className="sports__search-section">
@@ -20,6 +22,7 @@ function Main({ searchResults, error, setSearchResults, setError }) {
             <SearchForm
               setSearchResults={setSearchResults}
               setError={setError}
+              setIsLoading={setIsLoading}
             />
           </div>
           {error && <p style={{ color: "red" }}>{error}</p>}
@@ -27,10 +30,16 @@ function Main({ searchResults, error, setSearchResults, setError }) {
       </section>
 
       <section className="results__section">
-        {searchResults.length > 0 && (
-          <div className="news__card-list-container">
-            <NewsCardList cards={searchResults} />
-          </div>
+        {isLoading ? (
+          <CirclePreloader />
+        ) : (
+          searchResults.length > 0 && (
+            <div className="news__card-list-container">
+              <div className="news__card-list">
+                <NewsCardList cards={searchResults} />
+              </div>
+            </div>
+          )
         )}
       </section>
     </div>

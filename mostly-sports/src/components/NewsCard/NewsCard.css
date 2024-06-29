@@ -1,17 +1,20 @@
 .news__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 400px;
   height: 576px;
   border-radius: 8px;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 .news__card-image {
   width: 100%;
   height: auto;
   margin-bottom: 10px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
 }
 
 .news__card-date {
@@ -21,6 +24,7 @@
   line-height: 24px;
   color: #b6bcbf;
   margin-left: 24px;
+  margin-top: 20px;
 }
 
 .news__card-title {
@@ -30,6 +34,10 @@
   line-height: 30px;
   color: #1a1b22;
   margin-left: 24px;
+  margin-top: 15px;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .news__card-description {
@@ -51,4 +59,188 @@
   line-height: 20px;
   color: #b6bcbf;
   margin-left: 24px;
+  margin-top: auto;
+}
+
+.news__card-bookmark {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.news__card-bookmark img {
+  width: 24px;
+  height: 24px;
+}
+
+.news__card-bookmark.bookmarked {
+  background-color: #ffcc00;
+}
+
+@media (max-width: 1311px) {
+  .news__card {
+    width: calc((100% / 3) - 16px); /* Adjust width to fit 3 cards per row */
+    height: 576px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .news__card {
+    width: 190px;
+    height: 385px;
+    margin-bottom: 16px;
+  }
+
+  .news__card-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .news__card-date {
+    font-family: "SourceSansPro-Regular";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    color: #b6bcbf;
+    margin-left: 12px;
+    margin-top: 10px;
+  }
+
+  .news__card-title {
+    font-family: "RobotoSlab-Regular";
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #1a1b22;
+    margin-left: 12px;
+    margin-top: 10px;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .news__card-description {
+    font-family: "Roboto-Regular";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #1a1b22;
+    margin-bottom: 8px;
+    margin-left: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .news__card-source {
+    font-family: "RobotoSlab-Regular";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #b6bcbf;
+    margin-left: 12px;
+    margin-top: auto;
+  }
+
+  .news__card-bookmark {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .news__card-bookmark img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .news__card {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+
+  .news__card-title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .news__card-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .read-more-button {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .news__card {
+    width: 288px;
+    height: 440px;
+    margin-bottom: 10px;
+    padding: 15px;
+  }
+
+  .news__card-title {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .news__card-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .read-more-button {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+.news__card-bookmark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.news__card-bookmark img {
+  width: 20px;
+  height: 20px;
 }

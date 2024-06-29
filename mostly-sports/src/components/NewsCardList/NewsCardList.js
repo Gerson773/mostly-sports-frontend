@@ -10,22 +10,27 @@ function NewsCardList({ cards }) {
   };
 
   return (
-    <div className="news__card-list">
-      {cards.slice(0, visibleCount).map((card, index) => (
-        <NewsCard
-          key={index}
-          title={card.title}
-          description={card.description}
-          imageUrl={card.imageUrl}
-          date={card.date}
-          source={card.source}
-        />
-      ))}
-      {visibleCount < cards.length && (
-        <button className="news__card-show-more" onClick={handleShowMore}>
-          Show More
-        </button>
-      )}
+    <div className="news__card-list-container">
+      <div className="news__card-list">
+        {cards.slice(0, visibleCount).map((card, index) => (
+          <NewsCard
+            key={index}
+            title={card.title}
+            description={card.description}
+            imageUrl={card.imageUrl}
+            date={card.date}
+            source={card.source}
+          />
+        ))}
+      </div>
+
+      <div className="show__more">
+        {visibleCount < cards.length && (
+          <button className="news__card-show-more" onClick={handleShowMore}>
+            Show More
+          </button>
+        )}
+      </div>
     </div>
   );
 }

@@ -132,3 +132,64 @@
   line-height: 16.94px;
   color: #2f71e5;
 }
+
+@media (max-width: 480px) {
+  .modal__content {
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 8px;
+  }
+
+  .close__button-x {
+    width: 30px;
+    height: 30px;
+    top: -3px;
+    right: -3px;
+    transform: translate(75%, -75%);
+  }
+
+  .modal__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .modal__header {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .modal__input {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    padding-bottom: 8px;
+
+    .close__button-x {
+      width: 30px;
+      height: 30px;
+    }
+
+    .signin__btn,
+    .signup__btn {
+      width: 100%;
+      font-size: 16px;
+      line-height: 22px;
+      padding: 8px 40px;
+      margin-top: 20px;
+    }
+
+    .signup__login-link,
+    .signin__login-link {
+      width: 100%;
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: 10px;
+    }
+
+    .signup__text,
+    .signin__text {
+      font-size: 12px;
+      line-height: 14px;
+    }
+  }
+}
