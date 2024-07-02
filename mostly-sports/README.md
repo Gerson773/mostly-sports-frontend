@@ -13,6 +13,10 @@ The idea behind this project was to create a full-stack application and deploy i
 
 - **Responsive Design:** The site is optimized for both mobile and desktop viewing, ensuring a smooth user experience across different devices.
 
+# Deployed here:
+
+https://gerson773.github.io/mostly-sports-frontend/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
