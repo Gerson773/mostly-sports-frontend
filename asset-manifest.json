@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Gerson773/mostly-sports-frontend/static/css/main.83d5a25d.css",
-    "main.js": "/Gerson773/mostly-sports-frontend/static/js/main.c95b3673.js",
-    "static/js/453.4c9491f6.chunk.js": "/Gerson773/mostly-sports-frontend/static/js/453.4c9491f6.chunk.js",
-    "static/media/homescreen2.png": "/Gerson773/mostly-sports-frontend/static/media/homescreen2.b729bf46c7f0f5705cdd.png",
-    "static/media/Inter-Regular.ttf": "/Gerson773/mostly-sports-frontend/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
-    "static/media/mostly-sportslogo.svg": "/Gerson773/mostly-sports-frontend/static/media/mostly-sportslogo.29d2df8bb566bfc1cd438e39fd2f88f7.svg",
-    "static/media/SourceSansPro-Regular.otf": "/Gerson773/mostly-sports-frontend/static/media/SourceSansPro-Regular.7a9975d8c02d6933c47d.otf",
-    "static/media/Roboto-Medium.ttf": "/Gerson773/mostly-sports-frontend/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
-    "static/media/Roboto-Regular.ttf": "/Gerson773/mostly-sports-frontend/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
-    "static/media/Roboto-Bold.ttf": "/Gerson773/mostly-sports-frontend/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
-    "static/media/RobotoSlab-Medium.ttf": "/Gerson773/mostly-sports-frontend/static/media/RobotoSlab-Medium.2126424ccbd498e308f3.ttf",
-    "index.html": "/Gerson773/mostly-sports-frontend/index.html",
-    "static/media/closebtn.svg": "/Gerson773/mostly-sports-frontend/static/media/closebtn.4304b1ddb98905af4679.svg",
-    "static/media/x_icon.svg": "/Gerson773/mostly-sports-frontend/static/media/x_icon.afb25487c469e1a4033fc71b4318731b.svg",
-    "static/media/bookmark.svg": "/Gerson773/mostly-sports-frontend/static/media/bookmark.ac38929d7889b33d0bf68e8deaf8a3ae.svg",
-    "main.83d5a25d.css.map": "/Gerson773/mostly-sports-frontend/static/css/main.83d5a25d.css.map",
-    "main.c95b3673.js.map": "/Gerson773/mostly-sports-frontend/static/js/main.c95b3673.js.map",
-    "453.4c9491f6.chunk.js.map": "/Gerson773/mostly-sports-frontend/static/js/453.4c9491f6.chunk.js.map"
+    "main.css": "/mostly-sports-frontend/static/css/main.a965fe0a.css",
+    "main.js": "/mostly-sports-frontend/static/js/main.67bfe2fc.js",
+    "static/js/453.4c9491f6.chunk.js": "/mostly-sports-frontend/static/js/453.4c9491f6.chunk.js",
+    "static/media/homescreen2.png": "/mostly-sports-frontend/static/media/homescreen2.b729bf46c7f0f5705cdd.png",
+    "static/media/Inter-Regular.ttf": "/mostly-sports-frontend/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
+    "static/media/mostly-sportslogo.svg": "/mostly-sports-frontend/static/media/mostly-sportslogo.29d2df8bb566bfc1cd438e39fd2f88f7.svg",
+    "static/media/SourceSansPro-Regular.otf": "/mostly-sports-frontend/static/media/SourceSansPro-Regular.7a9975d8c02d6933c47d.otf",
+    "static/media/Roboto-Medium.ttf": "/mostly-sports-frontend/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
+    "static/media/Roboto-Regular.ttf": "/mostly-sports-frontend/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/Roboto-Bold.ttf": "/mostly-sports-frontend/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
+    "static/media/RobotoSlab-Medium.ttf": "/mostly-sports-frontend/static/media/RobotoSlab-Medium.2126424ccbd498e308f3.ttf",
+    "index.html": "/mostly-sports-frontend/index.html",
+    "static/media/closebtn.svg": "/mostly-sports-frontend/static/media/closebtn.4304b1ddb98905af4679.svg",
+    "static/media/x_icon.svg": "/mostly-sports-frontend/static/media/x_icon.afb25487c469e1a4033fc71b4318731b.svg",
+    "static/media/bookmark.svg": "/mostly-sports-frontend/static/media/bookmark.ac38929d7889b33d0bf68e8deaf8a3ae.svg",
+    "main.a965fe0a.css.map": "/mostly-sports-frontend/static/css/main.a965fe0a.css.map",
+    "main.67bfe2fc.js.map": "/mostly-sports-frontend/static/js/main.67bfe2fc.js.map",
+    "453.4c9491f6.chunk.js.map": "/mostly-sports-frontend/static/js/453.4c9491f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.83d5a25d.css",
-    "static/js/main.c95b3673.js"
+    "static/css/main.a965fe0a.css",
+    "static/js/main.67bfe2fc.js"
   ]
 }
