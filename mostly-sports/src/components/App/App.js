@@ -1,4 +1,5 @@
 import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "../Header/Header";
 import { useState, useEffect, useContext, createContext } from "react";
 import "normalize.css";
@@ -9,7 +10,6 @@ import Footer from "../Footer/Footer";
 import SigninModal from "../SigninModal/SigninModal";
 import SignupModal from "../SignupModal/SignupModal";
 import Main from "../Main/Main";
-import { Routes, Route } from "react-router-dom";
 import { NewsCardList } from "../NewsCardList/NewsCardList";
 import CirclePreloader from "../CirclePreloader/CirclePreloader";
 
