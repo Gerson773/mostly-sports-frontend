@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/mostly-sports-frontend/static/css/main.a965fe0a.css",
-    "main.js": "/mostly-sports-frontend/static/js/main.67bfe2fc.js",
+    "main.js": "/mostly-sports-frontend/static/js/main.3413807b.js",
     "static/js/453.4c9491f6.chunk.js": "/mostly-sports-frontend/static/js/453.4c9491f6.chunk.js",
     "static/media/homescreen2.png": "/mostly-sports-frontend/static/media/homescreen2.b729bf46c7f0f5705cdd.png",
     "static/media/Inter-Regular.ttf": "/mostly-sports-frontend/static/media/Inter-Regular.9ca9ba81e9dcaa12b3a1.ttf",
@@ -16,11 +16,11 @@
     "static/media/x_icon.svg": "/mostly-sports-frontend/static/media/x_icon.afb25487c469e1a4033fc71b4318731b.svg",
     "static/media/bookmark.svg": "/mostly-sports-frontend/static/media/bookmark.ac38929d7889b33d0bf68e8deaf8a3ae.svg",
     "main.a965fe0a.css.map": "/mostly-sports-frontend/static/css/main.a965fe0a.css.map",
-    "main.67bfe2fc.js.map": "/mostly-sports-frontend/static/js/main.67bfe2fc.js.map",
+    "main.3413807b.js.map": "/mostly-sports-frontend/static/js/main.3413807b.js.map",
     "453.4c9491f6.chunk.js.map": "/mostly-sports-frontend/static/js/453.4c9491f6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a965fe0a.css",
-    "static/js/main.67bfe2fc.js"
+    "static/js/main.3413807b.js"
   ]
 }
