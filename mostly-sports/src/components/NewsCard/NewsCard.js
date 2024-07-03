@@ -7,7 +7,6 @@ export function NewsCard({ title, description, imageUrl, date, source }) {
 
   const handleBookmarkClick = () => {
     setIsBookmarked(!isBookmarked);
-    // Here you can add logic to handle bookmarking (e.g., save to localStorage)
   };
 
   return (
