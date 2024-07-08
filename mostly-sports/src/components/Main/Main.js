@@ -7,10 +7,10 @@ import CirclePreloader from "../CirclePreloader/CirclePreloader";
 function Main({ searchResults, error, setSearchResults, setError }) {
   const [isLoading, setIsLoading] = useState(false);
   return (
-    <div>
+    <div className="main__container">
       <section className="sports__search-section">
         <div className="section__description-container">
-          <p className="section__description">Want to watch sports today?</p>
+          <h1 className="section__description">Want to watch sports today?</h1>
         </div>
         <div className="section__subdescription-container">
           <p className="section__subdescription">

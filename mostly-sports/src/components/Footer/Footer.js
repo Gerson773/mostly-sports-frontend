@@ -16,16 +16,25 @@ const Footer = () => {
         </div>
         <div className="footer__icons-container">
           <div>
-            <button className="home__button-footer" type="text">
+            <Link to="/" className="home__button-footer">
               Home
-            </button>
-            <button className="tripleten__button-footer" type="text">
+            </Link>
+            <a
+              href="https://tripleten.com"
+              className="tripleten__button-footer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               TripleTen
-            </button>
+            </a>
           </div>
-          <Link to="/">
+          <a
+            href="https://x.com/gersong773"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img src={icon1} alt="x-icon" className="x__icon" />
-          </Link>
+          </a>
         </div>
       </div>
     </footer>
