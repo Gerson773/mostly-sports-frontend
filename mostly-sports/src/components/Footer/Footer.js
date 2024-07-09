@@ -4,11 +4,11 @@ import icon1 from "../../../src/images/x_icon.svg";
 import { Link } from "react-router-dom";
 import FooterTicker from "../FooterTicker/FooterTicker";
 
-const Footer = () => {
+const Footer = ({ games, isTickerLoading }) => {
   return (
     <footer className="footer">
       <div className="footer__ticker-container">
-        <FooterTicker />
+        <FooterTicker games={games} isLoading={isTickerLoading} />
       </div>
       <div className="footer__content">
         <div className="footer__copyright-container">

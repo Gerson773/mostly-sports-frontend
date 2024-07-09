@@ -4,10 +4,17 @@ import SearchForm from "../SearchForm/SearchForm";
 import NewsCardList from "../NewsCardList/NewsCardList";
 import CirclePreloader from "../CirclePreloader/CirclePreloader";
 
-function Main({ searchResults, error, setSearchResults, setError }) {
-  const [isLoading, setIsLoading] = useState(false);
+function Main({
+  searchResults,
+  error,
+  setSearchResults,
+  setError,
+  handleSearch,
+  setIsLoading,
+  isLoading,
+}) {
   return (
-    <div className="main__container">
+    <main className="main__container">
       <section className="sports__search-section">
         <div className="section__description-container">
           <h1 className="section__description">Want to watch sports today?</h1>
@@ -23,6 +30,7 @@ function Main({ searchResults, error, setSearchResults, setError }) {
               setSearchResults={setSearchResults}
               setError={setError}
               setIsLoading={setIsLoading}
+              handleSearch={handleSearch}
             />
           </div>
           {error && <p style={{ color: "red" }}>{error}</p>}
@@ -42,7 +50,7 @@ function Main({ searchResults, error, setSearchResults, setError }) {
           )
         )}
       </section>
-    </div>
+    </main>
   );
 }
 
