@@ -40,6 +40,10 @@
   text-align: center;
 }
 
+.results__section {
+  width: 100%; /* Ensure it doesn’t exceed the viewport */
+}
+
 @media (max-width: 768px) {
   .sports__search-section {
     padding-top: 20px;
