@@ -19,7 +19,7 @@
 
 .modal__title {
   display: flex;
-  font-family: "Roboto-Bold";
+  font-family: "Roboto-Bold", Arial, Helvetica, sans-serif;
   font-weight: 900;
   font-size: 24px;
   line-height: 28.13px;
@@ -31,7 +31,7 @@
 }
 
 .modal__header {
-  font-family: "Inter-Regular";
+  font-family: "Inter-Regular", Arial, Helvetica, sans-serif;
   color: #2f71e5;
   font-weight: 400;
   font-size: 14px;
@@ -55,7 +55,7 @@
 }
 
 .modal__input::placeholder {
-  font-family: "Inter-Regular";
+  font-family: "Inter-Regular", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16.94px;
@@ -82,7 +82,7 @@
 .signup__btn {
   display: flex;
   width: 358px;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -103,7 +103,7 @@
   width: 358px;
   height: 20px;
   color: #000;
-  font-family: "Inter-Regular";
+  font-family: "Inter-Regular", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16.94px;
@@ -117,7 +117,7 @@
 
 .signup__text,
 .signin__text {
-  font-family: "Inter-Regular";
+  font-family: "Inter-Regular", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16.94px;
@@ -126,7 +126,7 @@
 }
 
 .signin__success-modal {
-  font-family: "Inter-Regular";
+  font-family: "Inter-Regular", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 16.94px;

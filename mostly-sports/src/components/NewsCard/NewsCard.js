@@ -7,11 +7,10 @@ export function NewsCard({ title, description, imageUrl, date, source }) {
 
   const handleBookmarkClick = () => {
     setIsBookmarked(!isBookmarked);
-    // Here you can add logic to handle bookmarking (e.g., save to localStorage)
   };
 
   return (
-    <div className="news__card">
+    <article className="news__card">
       {imageUrl && (
         <img src={imageUrl} alt={title} className="news__card-image" />
       )}
@@ -25,6 +24,6 @@ export function NewsCard({ title, description, imageUrl, date, source }) {
       <h3 className="news__card-title">{title}</h3>
       <p className="news__card-description">{description}</p>
       <p className="news__card-source">{source}</p>
-    </div>
+    </article>
   );
 }

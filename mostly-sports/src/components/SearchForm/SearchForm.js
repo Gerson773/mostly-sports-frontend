@@ -1,29 +1,13 @@
 import React, { useState } from "react";
 import "./SearchForm.css";
-import { getSearchResults } from "../../utils/Api";
 
-function SearchForm({ setSearchResults, setError, error, setIsLoading }) {
+function SearchForm({ setError, error, setIsLoading, handleSearch }) {
   const [eventId, setEventId] = useState("");
-
-  const handleSearch = () => {
-    getSearchResults(eventId)
-      .then((results) => {
-        setSearchResults(results);
-        setError(null);
-      })
-      .catch((error) => {
-        console.error("Error fetching search results:", error);
-        setError(error.message);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    handleSearch();
+    handleSearch(eventId);
   };
 
   return (

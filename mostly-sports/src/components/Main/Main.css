@@ -12,7 +12,7 @@
 }
 
 .section__description {
-  font-family: "RobotoSlab-Medium";
+  font-family: "RobotoSlab-Medium", Arial, Helvetica, sans-serif;
   color: #fff;
   font-size: 75px;
   line-height: 64px;
@@ -23,7 +23,7 @@
 }
 
 .section__subdescription {
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
   color: #fff;
   font-size: 18px;
   line-height: 24px;
@@ -38,6 +38,10 @@
   width: 608px;
   margin: 0 auto;
   text-align: center;
+}
+
+.results__section {
+  width: 100%; /* Ensure it doesn’t exceed the viewport */
 }
 
 @media (max-width: 768px) {
@@ -87,6 +91,31 @@
   .section__description-container,
   .section__subdescription-container {
     width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 352px) {
+  .sports__search-section {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .section__description {
+    font-size: 28px;
+    line-height: 32px;
+    text-align: center;
+  }
+
+  .section__subdescription {
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .section__description-container,
+  .section__subdescription-container {
+    width: 95%;
     margin: 0 auto;
   }
 }

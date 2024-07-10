@@ -20,7 +20,7 @@
 
 .footer__copyright {
   margin-left: 50px;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -48,7 +48,7 @@
 
 .home__button-footer {
   position: relative;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -58,11 +58,12 @@
   background: none;
   cursor: pointer;
   margin: 0;
+  text-decoration: none;
 }
 
 .tripleten__button-footer {
   position: relative;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -72,7 +73,8 @@
   background: none;
   cursor: pointer;
   align-items: center;
-  margin: 0;
+  margin: 10px;
+  text-decoration: none;
 }
 
 .footer__ticker-container {
@@ -154,5 +156,40 @@
   .x__icon {
     height: 18px;
     margin-left: -5px;
+  }
+}
+
+@media (max-width: 352px) {
+  .footer {
+    min-height: 150px;
+    padding: 5px;
+  }
+
+  .footer__content {
+    padding: 5px;
+  }
+
+  .footer__copyright {
+    font-size: 12px;
+    margin: 3px 0;
+  }
+
+  .footer__icons-container {
+    gap: 8px;
+    margin-bottom: 3px;
+  }
+
+  .home__button-footer,
+  .tripleten__button-footer {
+    font-size: 12px;
+  }
+
+  .footer__ticker-container {
+    bottom: 3px;
+  }
+
+  .x__icon {
+    height: 16px;
+    margin-left: -3px;
   }
 }

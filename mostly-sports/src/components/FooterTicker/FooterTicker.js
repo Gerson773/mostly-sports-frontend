@@ -1,28 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "../FooterTicker/FooterTicker.css";
-import { getScheduledEvents } from "../../utils/Api";
 
-const FooterTicker = () => {
-  const [games, setGames] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
+const FooterTicker = ({ games, isLoading }) => {
   const formatTime = (timestamp) => {
     const d = new Date(timestamp * 1000);
     return d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
   };
-
-  useEffect(() => {
-    getScheduledEvents()
-      .then((data) => {
-        if (data && data.events && data.events.length > 0) {
-          setGames(data.events);
-        } else {
-          console.error("No events found");
-        }
-      })
-      .catch((error) => console.error("Error fetching events:", error))
-      .finally(() => setIsLoading(false));
-  }, []);
 
   return (
     <div className="ticker__container">

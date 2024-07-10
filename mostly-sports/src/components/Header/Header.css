@@ -22,7 +22,7 @@
 
 .home-button {
   position: relative;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -45,7 +45,7 @@
 }
 
 .signin-button {
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
@@ -80,7 +80,7 @@
   }
 
   .home-button {
-    font-family: "Roboto-Regular";
+    font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: normal;
     line-height: 24px;
@@ -98,7 +98,7 @@
   }
 
   .signin-button {
-    font-family: "Roboto-Regular";
+    font-family: "Roboto-Regular", Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 24px;
     padding: 0 0;
@@ -135,6 +135,35 @@
   .signin-button {
     font-size: 14px;
     padding: 5px 20px;
+  }
+
+  .header__signin-container > div {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media (max-width: 352px) {
+  .header {
+    min-height: 40px;
+    padding: 5px 5px;
+  }
+
+  .header__signin-container {
+    gap: 5px;
+  }
+
+  .mostly__logo {
+    height: 60px;
+  }
+
+  .home-button,
+  .signin-button {
+    font-size: 12px;
+  }
+
+  .signin-button {
+    padding: 5px 15px;
   }
 
   .header__signin-container > div {

@@ -10,7 +10,7 @@ const Navigation = ({ onLogin }) => {
   };
 
   return (
-    <div className="navigation__container">
+    <nav className="navigation__container">
       <div
         className={`hamburger__menu ${isOpen ? "open" : ""}`}
         onClick={toggleMenu}
@@ -18,12 +18,12 @@ const Navigation = ({ onLogin }) => {
         &#9776;
       </div>
       <div className={`header__signin-container ${isOpen ? "open" : ""}`}>
-        <div>
+        <div className="button__container">
           <button className="home-button" type="button" onClick={toggleMenu}>
             Home
           </button>
         </div>
-        <div>
+        <div className="button__container">
           <button
             className="signin-button"
             type="button"
@@ -36,7 +36,7 @@ const Navigation = ({ onLogin }) => {
           </button>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

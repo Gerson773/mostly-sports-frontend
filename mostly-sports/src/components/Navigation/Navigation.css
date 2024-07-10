@@ -44,7 +44,6 @@
   display: flex;
 }
 
-/* Media Query for Mobile View */
 @media (max-width: 768px) {
   .hamburger__menu {
     display: block;
